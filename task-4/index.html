@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Tez-tez verilən suallar</h2>
+
+    <div class="faq-item">
+        <button class="faq-question">DOM nədir? <span>+</span></button>
+        <p class="faq-answer">DOM (Document Object Model) HTML sənədinin brauzer tərəfindən obyektlər ağaci şəklində təqdim olunmasidir. JavaScript bu ağac vasitəsilə HTML elementlərini seçir, dəyişdirir, yaradir və silir.</p>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">getElementById() ilə querySelector() arasinda fərq nədir? <span>+</span></button>
+        <p class="faq-answer">getElementById() elementi yaliz id atributuna görə seçir. querySelector() isə istənilən CSS selektoru ilə işləyir və uyğun gələn ilk elementi qaytarir.</p>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">HTMLCollection ilə NodeList arasinda fərq nədir? <span>+</span></button>
+        <p class="faq-answer">HTMLCollection live-dir, yəni DOM dəyişəndə avtomatik yenilənir. querySelectorAll() ilə gələn NodeList isə static-dir və sonradan dəyişmir. NodeList üzərində birbaşa forEach() işlədə bilərik.</p>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">remove() ilə removeChild() arasinda fərq nədir? <span>+</span></button>
+        <p class="faq-answer">remove() birbaşa elementin özü üzərində çağirilir və onu silir. removeChild() isə parent elementin üzərində çagirilir və göstərilən child elementi silir.</p>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Niyə addEventListener() istifadə etmək məsləhətdir? <span>+</span></button>
+        <p class="faq-answer">Eyni elementə eyni hadisə üçün bir neçə handler əlavə etməyə imkan verir. onclick property-si isə yeni funksiya təyin ediləndə əvvəlkini əvəz edir. Real layihələrdə əsasən addEventListener() işlədilir.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
