@@ -1,15 +1,67 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #334155;
+}
+
 #colorBox {
-    width: 300px;
-    height: 150px;
-    background-color: gray;
-    color: white;
+    width: 320px;
+    height: 160px;
+    background-color: #94a3b8; 
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    margin-bottom: 15px;
+    font-weight: 500;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+#colorBox:hover {
+    transform: translateY(-2px);
+}
+
+button {
+    background-color: #ffffff;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    padding: 10px 22px;
+    margin: 0 6px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+button:active {
+    transform: translateY(0);
 }

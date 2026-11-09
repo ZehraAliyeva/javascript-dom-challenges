@@ -2,28 +2,34 @@ const message = document.querySelector("#message");
 const counter = document.querySelector("#counter");
 const remaining = document.querySelector("#remaining");
 const clearBtn = document.querySelector("#clearBtn");
-const Max_Length = 100;
-function updateCounter(){
-    if (message.value.length > Max_Length){
-        message.value = message.value.slice(0, Max_Length);
+const progressBar = document.querySelector("#progressBar");
+const MAX_LENGTH = 100;
+function updateCounter() {
+    if (message.value.length > MAX_LENGTH) {
+        message.value = message.value.slice(0, MAX_LENGTH);
     }
-    const length = message.value.length;
-    counter.textContent = `${length} / ${Max_Length}`;
-    remaining.textContent = `Remaining:${Max_Length-length}`;
-    
-    counter.classList.remove("warning", "danger");
 
-    if (length >= Max_Length){
+    const length = message.value.length;
+
+    counter.textContent = `${length} / ${MAX_LENGTH}`;
+    remaining.textContent = `Remaining: ${MAX_LENGTH - length}`;
+    progressBar.style.width = `${(length / MAX_LENGTH) * 100}%`;
+
+    counter.classList.remove("warning", "danger");
+    progressBar.classList.remove("warning", "danger");
+
+    if (length >= MAX_LENGTH) {
         counter.classList.add("danger");
-    } else if (length > 80){
+        progressBar.classList.add("danger");     
+    } else if (length > 80) {
         counter.classList.add("warning");
-    } else {
-        counter.classList.add("normal");
+        progressBar.classList.add("warning");    
     }
 }
+
 message.addEventListener("input", updateCounter);
-clearBtn.addEventListener("click",() => {
+
+clearBtn.addEventListener("click", () => {
     message.value = "";
     updateCounter();
 });
-

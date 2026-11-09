@@ -3,15 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Counter</title>
+    <title>Modern Character Counter</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Character Counter</h2>
-    <textarea id="message" maxlength="100" placeholder="Write your message..."></textarea>
-    <p id="counter">0/100</p>
-    <p id="remaining">Remaining:100</p>
-    <button id="clearBtn">Clear</button>
+    <div class="card">
+        <div class="header">
+            <h2>Character Counter</h2>
+        </div>
+        
+        <div class="textarea-wrapper">
+            <textarea id="message" maxlength="100" placeholder="Write your amazing message here..."></textarea>
+        </div>
+
+        <div class="stats-container">
+            <span id="remaining">Remaining: 100</span>
+            <span id="counter">0 / 100</span>
+        </div>
+
+        <div class="progress-bar-container">
+            <div id="progressBar"></div>
+        </div>
+
+        <button id="clearBtn">Clear Text</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
